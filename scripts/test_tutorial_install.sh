@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Add conda magic to this environment
+. ~/miniconda3/etc/profile.d/conda.sh
+
 echo "Checking git and conda"
 git --version
 if [ $? -ne 0 ]
