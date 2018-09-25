@@ -27,12 +27,13 @@ def test_hz_to_midi_array():
     assert np.allclose(toymir.hz_to_midi([220.0, 440.0, 880.0]), expected)
 
 
-# Hello!  You could add the missing test for test_hz_to_midi here, in the middle of Part 5!
+# Hello!  You could add the missing test for test_hz_to_midi here!
 def test_hz_to_midi_throws_if_zero_or_less():
     # This is a bit magic-looking, but all it is saying is that
     # the test will pass if code inside the `with` block raises a ValueError!
     with pytest.raises(ValueError):
         toymir.hz_to_midi(0)
+
 
 def test_hz_to_period_float():
     expected = 0.1
